@@ -1,0 +1,107 @@
+// Benchmark created by MQT Bench on 2025-12-08
+// For more info: https://www.cda.cit.tum.de/mqtbench/
+// MQT Bench version: 2.1.0
+// Qiskit version: 2.1.1
+// Output format: qasm3
+// Level: nativegates
+// Target: ibm_heron
+// Used gateset: ['id', 'x', 'sx', 'rz', 'cz', 'reset', 'delay', 'measure']
+
+OPENQASM 3.0;
+include "stdgates.inc";
+bit[7] meas;
+qubit[7] q;
+sx q[0];
+rz(3*pi/4) q[0];
+sx q[0];
+rz(3*pi) q[0];
+sx q[1];
+rz(2.186276035465284) q[1];
+sx q[1];
+rz(3*pi) q[1];
+sx q[2];
+rz(2*pi/3) q[2];
+sx q[2];
+rz(3*pi) q[2];
+sx q[3];
+rz(2.0344439357957027) q[3];
+sx q[3];
+rz(3*pi) q[3];
+sx q[4];
+rz(1.9913306620788616) q[4];
+sx q[4];
+rz(3*pi) q[4];
+sx q[5];
+rz(1.958393013450077) q[5];
+sx q[5];
+rz(3*pi) q[5];
+x q[6];
+cz q[6], q[5];
+sx q[5];
+rz(4.324792293729509) q[5];
+sx q[5];
+rz(7*pi/2) q[5];
+cz q[5], q[4];
+sx q[4];
+rz(4.291854645100725) q[4];
+sx q[4];
+rz(7*pi/2) q[4];
+cz q[4], q[3];
+sx q[3];
+rz(4.2487413713838835) q[3];
+sx q[3];
+rz(7*pi/2) q[3];
+cz q[3], q[2];
+sx q[2];
+rz(4*pi/3) q[2];
+sx q[2];
+rz(7*pi/2) q[2];
+cz q[2], q[1];
+sx q[1];
+rz(4.096909271714303) q[1];
+sx q[1];
+rz(7*pi/2) q[1];
+cz q[1], q[0];
+sx q[0];
+rz(5*pi/4) q[0];
+sx q[0];
+rz(3*pi) q[0];
+rz(pi/2) q[6];
+sx q[6];
+rz(pi) q[6];
+cz q[5], q[6];
+sx q[5];
+rz(pi) q[5];
+cz q[4], q[5];
+sx q[4];
+rz(pi) q[4];
+cz q[3], q[4];
+sx q[3];
+rz(pi) q[3];
+cz q[2], q[3];
+sx q[2];
+rz(pi) q[2];
+cz q[1], q[2];
+sx q[1];
+rz(pi) q[1];
+cz q[0], q[1];
+sx q[1];
+rz(pi/2) q[1];
+sx q[2];
+rz(pi/2) q[2];
+sx q[3];
+rz(pi/2) q[3];
+sx q[4];
+rz(pi/2) q[4];
+sx q[5];
+rz(pi/2) q[5];
+sx q[6];
+rz(pi/2) q[6];
+barrier q[0], q[1], q[2], q[3], q[4], q[5], q[6];
+meas[0] = measure q[0];
+meas[1] = measure q[1];
+meas[2] = measure q[2];
+meas[3] = measure q[3];
+meas[4] = measure q[4];
+meas[5] = measure q[5];
+meas[6] = measure q[6];

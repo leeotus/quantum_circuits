@@ -1,0 +1,98 @@
+// Benchmark created by MQT Bench on 2025-11-10
+// For more info: https://www.cda.cit.tum.de/mqtbench/
+// MQT Bench version: 2.0.1
+// Qiskit version: 2.1.1
+// Output format: qasm3
+// Level: nativegates
+// Target: ibm_eagle
+// Used gateset: ['id', 'x', 'sx', 'rz', 'ecr', 'reset', 'delay', 'measure']
+
+OPENQASM 3.0;
+include "stdgates.inc";
+gate ecr _gate_q_0, _gate_q_1 {
+  s _gate_q_0;
+  sx _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  x _gate_q_0;
+}
+bit[4] meas;
+qubit[1] cin;
+qubit[1] a;
+qubit[1] b;
+qubit[1] cout;
+rz(-pi/2) cin[0];
+rz(-pi/2) a[0];
+rz(-pi/2) b[0];
+sx cout[0];
+rz(pi/2) cout[0];
+ecr b[0], cout[0];
+x b[0];
+rz(-pi/2) b[0];
+rz(3*pi/4) cout[0];
+sx cout[0];
+rz(pi) cout[0];
+ecr a[0], cout[0];
+x a[0];
+rz(-pi/2) a[0];
+rz(5*pi/4) cout[0];
+sx cout[0];
+rz(pi) cout[0];
+ecr b[0], cout[0];
+rz(-3*pi/4) b[0];
+sx b[0];
+rz(-0.5701223919321983) b[0];
+sx b[0];
+rz(-pi/2) b[0];
+rz(3*pi/4) cout[0];
+sx cout[0];
+rz(pi) cout[0];
+ecr a[0], cout[0];
+rz(pi/2) a[0];
+ecr a[0], b[0];
+rz(-3*pi/4) a[0];
+rz(pi/2) b[0];
+sx b[0];
+rz(-2.140918718727095) b[0];
+sx b[0];
+rz(-pi/4) b[0];
+rz(-3*pi/4) cout[0];
+sx cout[0];
+rz(-pi) cout[0];
+ecr b[0], cout[0];
+x b[0];
+rz(-pi/2) b[0];
+rz(3*pi/4) cout[0];
+sx cout[0];
+rz(pi) cout[0];
+ecr cin[0], cout[0];
+x cin[0];
+rz(-pi/2) cin[0];
+rz(5*pi/4) cout[0];
+sx cout[0];
+rz(pi) cout[0];
+ecr b[0], cout[0];
+rz(-3*pi/4) b[0];
+sx b[0];
+rz(-0.31447274887356436) b[0];
+sx b[0];
+rz(-pi/2) b[0];
+rz(3*pi/4) cout[0];
+sx cout[0];
+rz(pi) cout[0];
+ecr cin[0], cout[0];
+rz(pi/2) cin[0];
+ecr cin[0], b[0];
+rz(-3*pi/4) cin[0];
+rz(pi/2) b[0];
+sx b[0];
+rz(-1.8852690756684591) b[0];
+sx b[0];
+rz(pi/4) b[0];
+rz(3*pi/4) cout[0];
+sx cout[0];
+rz(pi/2) cout[0];
+barrier cin[0], a[0], b[0], cout[0];
+meas[0] = measure cin[0];
+meas[1] = measure a[0];
+meas[2] = measure b[0];
+meas[3] = measure cout[0];

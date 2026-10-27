@@ -1,0 +1,42 @@
+// Benchmark created by MQT Bench on 2025-10-16
+// For more info: https://www.cda.cit.tum.de/mqtbench/
+// MQT Bench version: 2.0.1
+// Qiskit version: 2.1.1
+// Output format: qasm3
+
+OPENQASM 3.0;
+include "stdgates.inc";
+bit[4] meas;
+qubit[4] q;
+h q[0];
+h q[1];
+h q[2];
+h q[3];
+p(12.013471791158686) q[0];
+p(2.609806595315514) q[1];
+p(10.410545461930019) q[2];
+p(1.8759344847470487) q[3];
+h q[0];
+h q[1];
+h q[2];
+h q[3];
+p(12.013471791158686) q[0];
+p(2.609806595315514) q[1];
+p(10.410545461930019) q[2];
+p(1.8759344847470487) q[3];
+ry(3.2220464314480877) q[0];
+ry(0.8540080589393146) q[1];
+ry(4.329343885871547) q[2];
+ry(5.288856933750764) q[3];
+cx q[2], q[3];
+cx q[1], q[2];
+cx q[0], q[1];
+ry(2.6735518805676657) q[0];
+ry(6.012543404956273) q[1];
+ry(5.185719590928789) q[2];
+ry(2.125069481984559) q[3];
+barrier q[0], q[1], q[2], q[3];
+meas[0] = measure q[0];
+meas[1] = measure q[1];
+meas[2] = measure q[2];
+meas[3] = measure q[3];

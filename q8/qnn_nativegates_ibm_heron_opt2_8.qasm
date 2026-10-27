@@ -1,0 +1,106 @@
+// Benchmark created by MQT Bench on 2025-12-08
+// For more info: https://www.cda.cit.tum.de/mqtbench/
+// MQT Bench version: 2.1.0
+// Qiskit version: 2.1.1
+// Output format: qasm3
+// Level: nativegates
+// Target: ibm_heron
+// Used gateset: ['id', 'x', 'sx', 'rz', 'cz', 'reset', 'delay', 'measure']
+
+OPENQASM 3.0;
+include "stdgates.inc";
+bit[8] meas;
+qubit[8] q;
+rz(-2.5338203414555416) q[0];
+sx q[0];
+rz(-2.654938495740045) q[0];
+sx q[0];
+rz(1.8698702388393293) q[0];
+rz(-1.9344551361668496) q[1];
+sx q[1];
+rz(-2.4368635524568525) q[1];
+sx q[1];
+rz(0.8303240933749585) q[1];
+rz(-1.0141328016853501) q[2];
+sx q[2];
+rz(-1.9464699380999653) q[2];
+sx q[2];
+rz(1.0530759232014866) q[2];
+rz(1.2407484998771094) q[3];
+sx q[3];
+rz(-2.233714396738363) q[3];
+sx q[3];
+rz(-1.1987246692211069) q[3];
+rz(-2.698112761651391) q[4];
+sx q[4];
+rz(-0.5244832268047794) q[4];
+sx q[4];
+rz(-1.2494910087913622) q[4];
+rz(-2.290492625849031) q[5];
+sx q[5];
+rz(-0.2089956871356975) q[5];
+sx q[5];
+rz(0.8591242790692171) q[5];
+rz(0.8759240551175473) q[6];
+sx q[6];
+rz(-1.660682162824875) q[6];
+sx q[6];
+rz(-1.0452884411662122) q[6];
+rz(-3.054805090606596) q[7];
+sx q[7];
+rz(-0.38141272630956813) q[7];
+sx q[7];
+rz(-1.6557362928450372) q[7];
+cz q[7], q[6];
+sx q[6];
+rz(pi/2) q[6];
+cz q[6], q[5];
+sx q[5];
+rz(-pi/2) q[5];
+cz q[4], q[5];
+sx q[4];
+rz(pi/2) q[4];
+cz q[3], q[4];
+sx q[3];
+rz(-pi/2) q[3];
+cz q[2], q[3];
+sx q[2];
+rz(pi/2) q[2];
+cz q[2], q[1];
+sx q[1];
+rz(-pi/2) q[1];
+cz q[0], q[1];
+sx q[0];
+rz(-0.9110285368422897) q[0];
+sx q[0];
+sx q[1];
+rz(3.1138223005602264) q[1];
+sx q[1];
+rz(-pi) q[1];
+sx q[2];
+rz(-2.446366957280193) q[2];
+sx q[2];
+sx q[3];
+rz(2.1580934730299557) q[3];
+sx q[3];
+sx q[4];
+rz(-2.9915152141999206) q[4];
+sx q[4];
+sx q[5];
+rz(2.492918173865993) q[5];
+sx q[5];
+sx q[6];
+rz(2.7877370683466367) q[6];
+sx q[6];
+sx q[7];
+rz(-1.3812349395858377) q[7];
+sx q[7];
+barrier q[0], q[1], q[2], q[3], q[4], q[5], q[6], q[7];
+meas[0] = measure q[0];
+meas[1] = measure q[1];
+meas[2] = measure q[2];
+meas[3] = measure q[3];
+meas[4] = measure q[4];
+meas[5] = measure q[5];
+meas[6] = measure q[6];
+meas[7] = measure q[7];

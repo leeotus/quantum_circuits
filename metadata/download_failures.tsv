@@ -1,0 +1,2 @@
+id	benchmark	level	target	opt_level	num_qubits	mirror	symbolic_parameters	status	message	payload_path
+6236	grover	nativegates	quantinuum	2	20	not-mirrored	random	invalid-payload	server returned non-QASM content: // QuantumCircuit with 20 qubits and 6028244 operations	/home/flareon/workshop/quantum_circuits/mqt_bench_all/errors/grover_nativegates_quantinuum_opt2_20__1935675b94.invalid.txt

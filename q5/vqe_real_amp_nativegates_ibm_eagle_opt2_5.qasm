@@ -1,0 +1,122 @@
+// Benchmark created by MQT Bench on 2025-11-10
+// For more info: https://www.cda.cit.tum.de/mqtbench/
+// MQT Bench version: 2.0.1
+// Qiskit version: 2.1.1
+// Output format: qasm3
+// Level: nativegates
+// Target: ibm_eagle
+// Used gateset: ['id', 'x', 'sx', 'rz', 'ecr', 'reset', 'delay', 'measure']
+
+OPENQASM 3.0;
+include "stdgates.inc";
+gate ecr _gate_q_0, _gate_q_1 {
+  s _gate_q_0;
+  sx _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  x _gate_q_0;
+}
+bit[5] meas;
+qubit[5] q;
+sx q[0];
+rz(2.86514324198955) q[0];
+sx q[0];
+rz(pi/2) q[0];
+sx q[1];
+rz(-1.8366893559320356) q[1];
+sx q[1];
+rz(pi/2) q[1];
+sx q[2];
+rz(2.063680077375217) q[2];
+sx q[2];
+rz(pi/2) q[2];
+sx q[3];
+rz(0.9379672423735244) q[3];
+sx q[3];
+sx q[4];
+rz(-3.0611388757314995) q[4];
+sx q[4];
+ecr q[3], q[4];
+rz(-pi/2) q[3];
+sx q[3];
+rz(-pi) q[3];
+ecr q[2], q[3];
+sx q[2];
+ecr q[1], q[2];
+sx q[1];
+ecr q[0], q[1];
+sx q[0];
+rz(-0.8540080589393142) q[0];
+sx q[0];
+rz(-pi/2) q[0];
+sx q[1];
+rz(1.1877512322817534) q[1];
+sx q[1];
+rz(pi/2) q[1];
+sx q[2];
+rz(2.1472642801609716) q[2];
+sx q[2];
+rz(pi/2) q[2];
+sx q[3];
+rz(-0.4680407730221283) q[3];
+sx q[3];
+rz(pi/2) q[3];
+x q[4];
+rz(0.2706419022233142) q[4];
+ecr q[3], q[4];
+sx q[3];
+ecr q[2], q[3];
+sx q[2];
+ecr q[1], q[2];
+sx q[1];
+ecr q[0], q[1];
+sx q[0];
+rz(1.097465716250797) q[0];
+sx q[0];
+rz(-pi/2) q[0];
+sx q[1];
+rz(-1.0165231716052343) q[1];
+sx q[1];
+rz(pi/2) q[1];
+sx q[2];
+rz(0.47601756170884135) q[2];
+sx q[2];
+rz(pi/2) q[2];
+sx q[3];
+rz(1.5915425546174937) q[3];
+sx q[3];
+rz(pi/2) q[3];
+rz(-pi) q[4];
+sx q[4];
+rz(-2.05525465103479) q[4];
+ecr q[3], q[4];
+sx q[3];
+ecr q[2], q[3];
+sx q[2];
+ecr q[1], q[2];
+sx q[1];
+ecr q[0], q[1];
+sx q[0];
+rz(0.41821842196874925) q[0];
+sx q[0];
+sx q[1];
+rz(4.052621190432083) q[1];
+sx q[1];
+rz(3*pi) q[1];
+sx q[2];
+rz(7.826211280944916) q[2];
+sx q[2];
+rz(3*pi) q[2];
+sx q[3];
+rz(4.01716328407509) q[3];
+sx q[3];
+rz(3*pi) q[3];
+sx q[4];
+rz(8.83748081453432) q[4];
+sx q[4];
+rz(3*pi) q[4];
+barrier q[0], q[1], q[2], q[3], q[4];
+meas[0] = measure q[0];
+meas[1] = measure q[1];
+meas[2] = measure q[2];
+meas[3] = measure q[3];
+meas[4] = measure q[4];
