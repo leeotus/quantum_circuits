@@ -1,0 +1,16 @@
+# Reversible embedding of mytest.pla (2 inputs, 1 outputs).
+# (x, y) -> (x, y XOR f(x))
+.i 3
+.o 3
+.ilb i0 i1 y0
+.ob i0 i1 y0
+.p 8
+000 001
+001 000
+010 011
+011 010
+100 100
+101 101
+110 111
+111 110
+.e
